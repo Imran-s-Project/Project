@@ -6,7 +6,7 @@ import { typewrite } from '../features/typewriter.js';
 export function buildHero() {
   const heading = el('h1', { class: 'font-display' }, bilingual(CONTENT.hero.name, 'span', 'block'));
 
-  const section = el('section', { class: 'hero' }, [
+  const section = el('section', { class: 'hero', id: 'main-content' }, [
     el('div', { class: 'container' }, [
       el('div', { class: 'eyebrow' }, bilingual(CONTENT.hero.eyebrow)),
       heading,
