@@ -6,6 +6,7 @@ import { initCursorGlow } from './features/cursorGlow.js';
 import { initMagnetic } from './features/magnetic.js';
 import { initNavIndicator } from './features/navIndicator.js';
 import { mountEmberField } from './features/emberField.js';
+import { initHeaderOffset } from './features/headerOffset.js';
 
 function bootstrap() {
   initLang();
@@ -20,6 +21,7 @@ function bootstrap() {
   initCursorGlow();
   initMagnetic('.btn');
   initNavIndicator();
+  initHeaderOffset(document.querySelector('header'));
   mountEmberField(document.getElementById('banner-embers'));
 }
 
