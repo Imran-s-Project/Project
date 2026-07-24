@@ -34,8 +34,8 @@ export const CONTENT = {
     eyebrow: { bn: 'ইন্ডিপেন্ডেন্ট ওয়েব ডেভেলপার · বাংলাদেশ', en: 'Independent Web Developer · Bangladesh' },
     name: { bn: 'ইমরান আহমেদ', en: 'Imran Ahmed' },
     tagline: {
-      bn: 'প্রিমিয়াম ওয়েব অভিজ্ঞতা তৈরি করি — কুরআন অ্যাপ থেকে শুরু করে পরীক্ষা প্ল্যাটফর্ম পর্যন্ত, প্রতিটি লাইন ভ্যানিলা জাভাস্ক্রিপ্ট আর ফায়ারবেস দিয়ে, কোনো ফ্রেমওয়ার্ক ছাড়াই।',
-      en: 'I build premium web experiences — from Quran apps to exam platforms — every line written in vanilla JavaScript and Firebase, no frameworks, no shortcuts.'
+      bn: ' ওয়েব অভিজ্ঞতা তৈরি করি — কুরআন অ্যাপ থেকে শুরু করে পরীক্ষা প্ল্যাটফর্ম পর্যন্ত, প্রতিটি লাইন ভ্যানিলা জাভাস্ক্রিপ্ট আর ফায়ারবেস দিয়ে, কোনো ফ্রেমওয়ার্ক ছাড়াই।',
+      en: 'I build web experiences — from Quran apps to exam platforms — every line written in vanilla JavaScript and Firebase, no frameworks, no shortcuts.'
     },
     ctaPrimary: { bn: 'প্রজেক্টগুলো দেখুন', en: 'View Projects' },
     ctaGhost: { bn: 'যোগাযোগ করুন', en: 'Get in Touch' },
@@ -47,53 +47,56 @@ export const CONTENT = {
     heading: { bn: 'যা নিয়ে কাজ করি', en: 'What I work on' },
     paragraphs: [
       {
-        bn: 'আমি বাংলাদেশ থেকে একজন স্বাধীন ওয়েব ডেভেলপার। <strong>ভ্যানিলা জাভাস্ক্রিপ্ট আর ফায়ারবেস</strong> দিয়ে শুরু থেকে শেষ পর্যন্ত ফিচার-সমৃদ্ধ পিডব্লিউএ এবং ব্রাউজার-বেজড টুল তৈরি করি — প্রতিটি মডিউল নিজের হাতে গঠন করা।',
-        en: "I'm an independent web developer from Bangladesh. I build feature-rich PWAs and browser-based tools from the ground up with <strong>vanilla JavaScript and Firebase</strong> — every module hand-structured."
+        bn: ' পৃথিবীতে সকলের নেশা এক না ওয়েব ডিজাইন এবং ওয়েব বিল্ডিং সহ সকল কাজ আমি আমার জীবনের সবচেয়ে বেশি গুরুত্ব সহকারে করে থাকি আলহামদুলিল্লাহ্ আল্লাহ্ ভরসা। <strong> আধুনিক জাভা স্ক্রিপ্ট,আধুনিক সিএসএস ও এইচটিএমএল সহ ব্যাকএন্ড হিসেবে ফায়ার ডাটাবেজ এবং ইমেইল যেএস </strong> দিয়ে শুরু থেকে শেষ পর্যন্ত ফিচার-সমৃদ্ধ পিডব্লিউএ এবং ব্রাউজার-বেজড টুল তৈরি করি — প্রতিটি মডিউল নিজের হাতে গঠন করা।',
+        en: "Not everyone in the world has the same addiction. I take all the work, including web design and web building, with the utmost seriousness in my life. Alhamdulillah, trust in Allah. <strong>Modern JavaScript, modern CSS and HTML, along with Firebase and email JS as backends</strong> — every module hand-structured."
       },
       {
-        bn: 'আমার কাজের পরিধি একটা বাংলা কুরআন অ্যাপ থেকে শুরু করে একটা পূর্ণাঙ্গ কোলাবোরেটিভ ওয়েব আইডিই, একটা কমিউনিটি ফাউন্ডেশনের ওয়েবসাইট এবং ফায়ারবেস-চালিত এক্সাম প্ল্যাটফর্ম পর্যন্ত বিস্তৃত।',
-        en: "My work spans a feature-rich Bengali Quran app, a full collaborative web IDE, a community foundation's website, and a Firebase-powered exam platform."
+        bn: 'আমার কাজের পরিধি একটা বাংলা কুরআন অ্যাপ থেকে শুরু করে একটা পূর্ণাঙ্গ কোলাবোরেটিভ ওয়েব আইডিই, একটা কমিউনিটি ফাউন্ডেশনের ওয়েবসাইট এবং ফায়ারবেস-চালিত এক্সাম প্ল্যাটফর্ম সহ বিভিন্ন টেক রিলেটেড আইডিয়া প্রয়োগ করে সাইট কে আরো বেশি স্ট্রং করে তোলাই আমার কাজ যা ইউজার এর জন্য বলো কিছু উপহার দেওয়া আমার চিন্তা দ্বারা।',
+        en: "My work ranges from a Bengali Quran app to a full-fledged collaborative web IDE, a community foundation website, and a Firebase-powered exam platform. My job is to make the site stronger by implementing various tech-related ideas, which are my thoughts on giving something back to the user."
       },
       {
-        bn: 'আমি বিশ্বাস করি সম্পূর্ণ, পরিপাটি এবং "প্রিমিয়াম" ফিচার নিয়ে আসাটাই আসল কাজ — অর্ধেক করা কিছু নয়।',
-        en: 'I believe in shipping complete, polished, "premium" implementations — never half-done work.'
+        bn: 'ওয়েবসাইট তৈরি করতে বিশ্বাস এবং যেই ভাষা হোক সেইটা নিয়েই কাজ শুরু করা যা নিজে কে অভিজ্ঞতা করে তোলে',
+        en: 'Trust in building a website and starting with whatever language you choose is what makes you an expert.'
       }
     ],
-    skillsLabel: { bn: 'দক্ষতা ও টুলস', en: 'Skills & Tools' },
+    skillsLabel: { bn: ' আমার কাজ ও কাজের ধরন সমূহ', en: 'My work and types of work' },
     skills: [
       'JavaScript (ES2023)',
-      'Firebase & Firestore',
-      'PWA / Service Workers',
-      'IndexedDB',
-      'Canvas API',
+      'Firebase & Firestore database',
+      'Firebase authentication',
+      'PWA register',
+      'IndexedDB data management',
+      'Canvas API config',
       'Web Components',
       'GitHub OAuth & Pages',
+      'github tech',
       'Performance Tuning',
-      'Bengali-first UX'
+      'Modern UI-UX'
+
     ]
   },
 
   projectsSection: {
-    eyebrow: { bn: 'সিলেক্টেড ওয়ার্ক', en: 'Selected Work' },
+    eyebrow: { bn: ' আমার তৈরি করা কিছু কাজ', en: 'Some of the work I have created' },
     heading: { bn: 'প্রজেক্টসমূহ', en: 'Projects' },
-    intro: { bn: 'যেকোনো প্রজেক্টে ক্লিক করলে বিস্তারিত ও লাইভ প্রিভিউ দেখা যাবে।', en: 'Click any project to see the details and a live preview.' },
-    viewLabel: { bn: 'দেখুন', en: 'View project' },
+    intro: { bn: 'যেকোনো প্রজেক্টে ক্লিক করে বিস্তারিত দেখুন।', en: 'Click on any project to see details.' },
+    viewLabel: { bn: ' প্রজেক্ট দেখুন', en: 'View project' },
     soonLabel: { bn: 'শীঘ্রই আসছে', en: 'Coming soon' }
   },
 
   contactSection: {
-    eyebrow: { bn: 'যোগাযোগ', en: 'Get in touch' },
-    heading: { bn: 'চলুন কথা বলি', en: "Let's talk" },
+    eyebrow: { bn: ' আমার সাথে যোগাযোগের মাধ্যম', en: 'Get in touch' },
+    heading: { bn: ' যোগাযোগ করুন', en: "Let's talk" },
     primaryBlurb: {
-      bn: 'নতুন প্রজেক্ট, সহযোগিতা, বা যেকোনো প্রশ্নের জন্য সরাসরি ইমেইল করুন।',
-      en: 'For new projects, collaborations, or any question — email directly.'
+      bn: 'নতুন প্রজেক্ট, সহযোগিতা, বা যেকোনো প্রশ্নের জন্য সরাসরি ইমেইল করুন বা ম্যাসেজ করুন আমাদের ফেসবুক পেজে।',
+      en: 'For new projects, collaborations, or any questions, email or message us directly on our Facebook page.'
     },
     primaryCta: { bn: 'ইমেইল পাঠান', en: 'Send an Email' },
     resumeCta: { bn: 'সিভি ডাউনলোড করুন', en: 'Download CV' }
   },
 
   footer: {
-    bn: 'ডিজাইন ও তৈরি — ইমরান আহমেদ, ভালোবাসা <span class="heart">♥</span> দিয়ে',
+    bn: 'Designed and created by — Imran Ahmed, Love <span class="heart">♥</span> With',
     en: 'Designed & built by Imran Ahmed, with <span class="heart">♥</span>'
   },
 
