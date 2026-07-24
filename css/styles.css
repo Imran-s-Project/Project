@@ -37,6 +37,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h, 82px);
 }
 
 body {
@@ -411,7 +412,7 @@ html[data-lang='en'] .mobile-nav a {
 .hero-banner {
   position: relative;
   z-index: 1;
-  margin-top: 82px;
+  margin-top: var(--header-h, 82px);
   height: clamp(200px, 30vw, 360px);
   overflow: hidden;
   border-bottom: 1px solid var(--line);
@@ -511,7 +512,6 @@ html[data-lang='en'] .mobile-nav a {
 
 @media (max-width: 720px) {
   .hero-banner {
-    margin-top: 68px;
     height: 200px;
   }
 }
