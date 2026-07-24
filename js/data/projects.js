@@ -8,9 +8,9 @@ export const projects = [
   {
     id: 'quranbangla',
     index: '01',
-    nameBn: 'কুরআন বাংলা (AlQuran PWA)',
-    nameEn: 'QuranBangla (AlQuran PWA)',
-    descBn: 'ফিচার-সমৃদ্ধ বাংলা কুরআন পিডব্লিউএ — ওয়ার্ড-বাই-ওয়ার্ড অনুবাদ, তাফসির, হিফজ ট্র্যাকার ও সিজদাহ চিহ্নিতকরণসহ।',
+    nameBn: 'কুরআন বাংলা ',
+    nameEn: 'QuranBangla ',
+    descBn: 'ফিচার-সমৃদ্ধ বাংলা কুরআন পিডব্লিউএ (PWA) — ওয়ার্ড-বাই-ওয়ার্ড অনুবাদ, তাফসির, হিফজ ট্র্যাকার ও সিজদাহ চিহ্নিতকরণসহ।',
     descEn: 'A feature-rich Bengali Quran PWA with word-by-word translation, tafsir, a hifz tracker, and sajdah marking.',
     detailBn:
       'সম্পূর্ণ অফলাইন-প্রথম আর্কিটেকচারে তৈরি — ইনডেক্সডবি স্টোরেজ, সার্ভিস ওয়ার্কার ক্যাশিং, এবং একটি রিডার-মোড টুলবার যা পড়ার সময় নেভিগেশনকে সরিয়ে প্রসঙ্গ-সংবেদনশীল নিয়ন্ত্রণ দেয়। ১১৪টি সূরার জন্য শানে নুযূল ও ফযীলত যুক্ত করা হয়েছে বাংলায়।',
@@ -23,8 +23,8 @@ export const projects = [
   {
     id: 'quranview',
     index: '02',
-    nameBn: 'QuranView',
-    nameEn: 'QuranView',
+    nameBn: ' আল কুরআন',
+    nameEn: 'Al Quran',
     descBn: 'কুরআন পড়ার অভিজ্ঞতাকে কেন্দ্র করে তৈরি সহায়ক প্ল্যাটফর্ম, পরিচ্ছন্ন রিডার-মোড ও রিসাইটার অডিওসহ।',
     descEn: 'A companion Quran reading experience built around a clean reader mode with reciter audio support.',
     detailBn: 'রিসাইটার অডিও স্ট্রিমিং এবং রিজিউমেবল ডাউনলোড ব্যবস্থাপনার উপর ফোকাস করে তৈরি, যাতে ধীরগতির নেটওয়ার্কেও পড়া বাধাগ্রস্ত না হয়।',
@@ -36,8 +36,8 @@ export const projects = [
   {
     id: 'techverse',
     index: '03',
-    nameBn: 'TechVerse',
-    nameEn: 'TechVerse',
+    nameBn: 'Tech Verse',
+    nameEn: 'Tech Verse',
     descBn: 'কোলাবোরেটিভ ব্রাউজার-বেজড কোড আইডিই — লাইভ প্রিভিউ, ইন-ব্রাউজার টার্মিনাল ও গিটহাব ডিপ্লয়মেন্টসহ।',
     descEn: 'A collaborative browser-based code IDE with live preview, an in-browser terminal, and GitHub deployment.',
     detailBn:
@@ -51,8 +51,8 @@ export const projects = [
   {
     id: 'rupsha-foundation',
     index: '04',
-    nameBn: 'রূপসা জনকল্যাণ ফাউন্ডেশন',
-    nameEn: 'Rupsha Jonokollan Foundation',
+    nameBn: 'রূপসা জনকল্যাণ ফাউন্ডেশন পুরাতন',
+    nameEn: 'Rupsha Jonokollan Foundation old',
     descBn: 'কমিউনিটি কল্যাণ ফাউন্ডেশনের জন্য মডুলার, রিয়েল-টাইম ডোনেশন আপডেটসহ পূর্ণাঙ্গ মাল্টি-পেজ ওয়েবসাইট।',
     descEn: 'A full multi-page website for a community welfare foundation with real-time donation updates.',
     detailBn: 'মনোলিথিক index.html কে মডুলার external CSS ও JS ফাইলে রিফ্যাক্টর করা হয়েছে। ফায়ারস্টোর থেকে সরাসরি ফিড হওয়া একটি রিয়েল-টাইম ডোনেশন পপ-আপ ব্যানার রয়েছে।',
@@ -64,8 +64,8 @@ export const projects = [
   {
     id: 'rupsha-jf',
     index: '05',
-    nameBn: 'রূপসা জেএফ',
-    nameEn: 'Rupsha JF',
+    nameBn: 'রূপসা জনকল্যাণ ফাউন্ডেশন',
+    nameEn: 'Rupsha jonokollan foundation',
     descBn: 'রূপসা ফাউন্ডেশনের অল্টারনেট, সংক্ষিপ্ত ডোমেইন — একই মিশন, দ্রুত শেয়ারের জন্য।',
     descEn: "The foundation\u2019s alternate short-form domain \u2014 same mission, quicker to share.",
     detailBn: 'দ্রুত শেয়ারযোগ্য একটি সংক্ষিপ্ত ডোমেইনে ফাউন্ডেশনের মূল কন্টেন্ট ও ডোনেশন ফিচার হোস্ট করা।',
@@ -77,8 +77,8 @@ export const projects = [
   {
     id: 'testora',
     index: '06',
-    nameBn: 'টেস্টোরা',
-    nameEn: 'Testora',
+    nameBn: ' টেস্টোরা এক্সাম',
+    nameEn: 'Testora exam',
     descBn: 'বাংলা ভাষার পরীক্ষা ও কুইজ প্ল্যাটফর্ম, ফায়ারবেসের উপর নির্মিত — এই মুহূর্তে সক্রিয়ভাবে তৈরি হচ্ছে।',
     descEn: "A Bengali-language exam and quiz platform built on Firebase \u2014 currently in active development.",
     detailBn: 'ফায়ারস্টোর সিকিউরিটি রুলস, শিক্ষার্থীদের জন্য পরীক্ষা দৃশ্যমানতা এবং একটি রিডিজাইন করা লগইন UI নিয়ে কাজ চলছে।',
