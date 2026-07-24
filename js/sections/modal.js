@@ -6,13 +6,18 @@ let overlay = null;
 let panel = null;
 let activeProject = null;
 let lastFocused = null;
+let previewTimeoutId = null;
 
 function renderContent(project) {
   if (!panel) return;
+  if (previewTimeoutId != null) {
+    clearTimeout(previewTimeoutId);
+    previewTimeoutId = null;
+  }
   const lang = getLang();
   const name = lang === 'bn' ? project.nameBn : project.nameEn;
   const detail = lang === 'bn' ? project.detailBn : project.detailEn;
-  const { visitLabel, previewLabel, soonLabel, closeLabel } = CONTENT.modal;
+  const { visitLabel, previewLabel, soonLabel, closeLabel, blockedLabel } = CONTENT.modal;
 
   panel.innerHTML = '';
 
@@ -39,16 +44,39 @@ function renderContent(project) {
   let previewBlock;
   if (project.url) {
     const loadingLabel = el('div', { class: 'modal-preview-loading', text: t(previewLabel) });
+    const fallback = el('div', { class: 'modal-preview-fallback' }, [
+      el('p', { text: t(blockedLabel) }),
+      el('a', {
+        class: 'btn btn-ghost',
+        href: project.url,
+        target: '_blank',
+        rel: 'noopener',
+        text: `${t(visitLabel)} ↗`
+      })
+    ]);
     const iframe = el('iframe', {
       src: project.url,
       title: `${name} live preview`,
       loading: 'lazy',
       referrerpolicy: 'no-referrer'
     });
+    let hasLoaded = false;
     iframe.addEventListener('load', () => {
+      hasLoaded = true;
       loadingLabel.style.display = 'none';
+      fallback.classList.remove('is-visible');
     });
-    previewBlock = el('div', { class: 'modal-preview' }, [loadingLabel, iframe]);
+    // Some hosts (X-Frame-Options / CSP frame-ancestors) silently refuse to
+    // render inside an iframe with no JS-visible error. If nothing has
+    // loaded after a few seconds, assume it's blocked and offer a direct link
+    // instead of leaving the visitor staring at a blank box.
+    previewTimeoutId = setTimeout(() => {
+      if (!hasLoaded) {
+        loadingLabel.style.display = 'none';
+        fallback.classList.add('is-visible');
+      }
+    }, 4000);
+    previewBlock = el('div', { class: 'modal-preview' }, [loadingLabel, iframe, fallback]);
   } else {
     previewBlock = el('div', { class: 'modal-preview modal-preview-empty' }, el('p', { text: t(soonLabel) }));
   }
@@ -81,6 +109,10 @@ export function openProjectModal(project) {
 
 export function closeProjectModal() {
   if (!overlay) return;
+  if (previewTimeoutId != null) {
+    clearTimeout(previewTimeoutId);
+    previewTimeoutId = null;
+  }
   overlay.classList.remove('is-open');
   document.body.style.overflow = '';
   activeProject = null;
@@ -98,8 +130,23 @@ export function buildModalShell() {
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay?.classList.contains('is-open')) {
+    if (!overlay?.classList.contains('is-open')) return;
+    if (e.key === 'Escape') {
       closeProjectModal();
+      return;
+    }
+    if (e.key === 'Tab') {
+      const focusables = panel.querySelectorAll('a[href], button:not([disabled])');
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 
