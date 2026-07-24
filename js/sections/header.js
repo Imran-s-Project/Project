@@ -33,10 +33,42 @@ export function buildHeader() {
   onLangChange(syncButtons);
   syncButtons();
 
+  // Mobile-only hamburger + slide-down panel — .nav-links is display:none
+  // below 720px, so this is the only way to reach the nav links on phones.
+  const navToggle = el(
+    'button',
+    { type: 'button', class: 'nav-toggle', 'aria-label': 'Menu', 'aria-expanded': 'false', 'aria-controls': 'mobile-nav' },
+    [el('span', {}), el('span', {}), el('span', {})]
+  );
+
+  const mobileNav = el(
+    'div',
+    { class: 'mobile-nav', id: 'mobile-nav' },
+    CONTENT.nav.links.map((link) => el('a', { href: link.href }, bilingual(link)))
+  );
+
+  function setMenuOpen(open) {
+    mobileNav.classList.toggle('is-open', open);
+    navToggle.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  navToggle.addEventListener('click', () => setMenuOpen(!mobileNav.classList.contains('is-open')));
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') setMenuOpen(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) setMenuOpen(false);
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) setMenuOpen(false);
+  });
+
   const nav = el('nav', {}, [
     el('div', { class: 'logo-mark' }, [LOGO_MARK, el('span', { text: CONTENT.nav.logo })]),
-    el('div', { class: 'nav-right' }, [navLinks, el('div', { class: 'lang-toggle' }, [btnBn, btnEn])])
+    el('div', { class: 'nav-right' }, [navLinks, el('div', { class: 'lang-toggle' }, [btnBn, btnEn]), navToggle])
   ]);
 
-  return el('header', {}, nav);
+  return el('header', {}, [nav, mobileNav]);
 }
