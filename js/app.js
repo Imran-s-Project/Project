@@ -1,5 +1,6 @@
 import { el } from './core/dom.js';
 import { buildHeader } from './sections/header.js';
+import { buildHeroBanner } from './sections/heroBanner.js';
 import { buildHero } from './sections/hero.js';
 import { buildAbout } from './sections/about.js';
 import { buildProjectsSection } from './sections/projects.js';
@@ -18,6 +19,7 @@ export function renderApp(root) {
   root.append(
     starField,
     buildHeader(),
+    buildHeroBanner(),
     buildHero(),
     buildAbout(),
     buildProjectsSection(),
