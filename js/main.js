@@ -5,6 +5,7 @@ import { initScrollReveal } from './features/reveal.js';
 import { initCursorGlow } from './features/cursorGlow.js';
 import { initMagnetic } from './features/magnetic.js';
 import { initNavIndicator } from './features/navIndicator.js';
+import { mountEmberField } from './features/emberField.js';
 
 function bootstrap() {
   initLang();
@@ -19,6 +20,7 @@ function bootstrap() {
   initCursorGlow();
   initMagnetic('.btn');
   initNavIndicator();
+  mountEmberField(document.getElementById('banner-embers'));
 }
 
 if (document.readyState === 'loading') {
