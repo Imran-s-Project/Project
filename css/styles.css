@@ -633,6 +633,84 @@ section.tight {
   font-size: 1.05rem;
 }
 
+/* ---- showcase (intro video) -------------------------------------------------- */
+.video-frame {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 7px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  box-shadow: 0 30px 70px -40px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.video-frame:hover {
+  border-color: var(--accent);
+  box-shadow: 0 30px 70px -36px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(201, 161, 90, 0.12);
+}
+
+.showcase-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: calc(var(--radius-lg) - 4px);
+  background: var(--surface-2);
+  object-fit: cover;
+}
+
+/* Small seal-style corner brackets, echoing the star mark used elsewhere,
+   so the video reads as a stamped registry plate rather than a stock embed. */
+.frame-corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.3s var(--ease);
+}
+.video-frame:hover .frame-corner {
+  opacity: 1;
+}
+.corner-tl {
+  top: -9px;
+  left: -9px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+  border-top-left-radius: 4px;
+}
+.corner-tr {
+  top: -9px;
+  right: -9px;
+  border-top: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+  border-top-right-radius: 4px;
+}
+.corner-bl {
+  bottom: -9px;
+  left: -9px;
+  border-bottom: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+  border-bottom-left-radius: 4px;
+}
+.corner-br {
+  bottom: -9px;
+  right: -9px;
+  border-bottom: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+  border-bottom-right-radius: 4px;
+}
+
+@media (max-width: 560px) {
+  .video-frame {
+    padding: 5px;
+  }
+  .frame-corner {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 /* ---- about ----------------------------------------------------------------- */
 .about-grid {
   display: grid;
