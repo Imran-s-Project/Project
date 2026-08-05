@@ -18,7 +18,7 @@ export const SITE = {
   resumeUrl: 'assets/imran-ahmed-cv.pdf',
   // Showcase/intro video shown in the "showcase" section, just below the
   // hero. Swap this URL any time — nothing else needs to change.
-  showcaseVideoUrl: '/ad.vd/imran's.mp4'
+  showcaseVideoUrl: 'https://myprojectinfo.vercel.app/ad.vd/imran's.mp4'
 };
 
 export const CONTENT = {
