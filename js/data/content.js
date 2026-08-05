@@ -15,13 +15,17 @@ export const SITE = {
   email: 'project.developer.tech@gmail.com',
   // Drop your actual PDF at this path (e.g. assets/imran-ahmed-cv.pdf) —
   // the button below is wired up but the file itself isn't included here.
-  resumeUrl: 'assets/imran-ahmed-cv.pdf'
+  resumeUrl: 'assets/imran-ahmed-cv.pdf',
+  // Showcase/intro video shown in the "showcase" section, just below the
+  // hero. Swap this URL any time — nothing else needs to change.
+  showcaseVideoUrl: 'https://quranbangla.vercel.app/lv_7545705131661167925_20260805122504.mp4'
 };
 
 export const CONTENT = {
   nav: {
     logo: 'IMRAN AHMED',
     links: [
+      { href: '#showcase', bn: 'ভিডিও', en: 'Video' },
       { href: '#projects', bn: 'প্রজেক্ট', en: 'Projects' },
       { href: '#about', bn: 'সম্পর্কে', en: 'About' },
       { href: '#contact', bn: 'যোগাযোগ', en: 'Contact' }
@@ -40,6 +44,15 @@ export const CONTENT = {
     ctaPrimary: { bn: 'প্রজেক্টগুলো দেখুন', en: 'View Projects' },
     ctaGhost: { bn: 'যোগাযোগ করুন', en: 'Get in Touch' },
     scrollHint: { bn: 'স্ক্রল করুন', en: 'SCROLL' }
+  },
+
+  showcase: {
+    eyebrow: { bn: 'সংক্ষিপ্ত পরিচিতি', en: 'Introduction' },
+    heading: { bn: 'একনজরে আমার কাজ', en: 'A closer look at my work' },
+    intro: {
+      bn: 'নিচের ভিডিওতে দেখে নিন আমার কাজের ধরন এবং তৈরি করা প্রজেক্টগুলোর একটি সংক্ষিপ্ত ঝলক।',
+      en: "A short walkthrough of how I work and the projects I've built."
+    }
   },
 
   about: {
